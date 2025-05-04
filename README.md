@@ -3,32 +3,34 @@
 ## 📘 Declaration (Declaração)
 
 ### 📄 Descrição
-É o modo mais tradicional de definir uma função. Começa com a palavra reservada `function`, seguida do nome da função, parâmetros (entre parênteses) e o corpo da função (entre chaves).
+É o modo mais tradicional de definir uma função. Começa com a palavra reservada `function`, seguida do nome da função `soma1`, parâmetros entre parênteses ( parametros são opcionais) e o corpo da função que fica entre chaves {}.
+
 
 ```javascript
 function soma1(a, b) {
   return a + b;
 }
-
-console.log(soma1(424, 848)); // 1272
+cmonsole.log(soma1(424, 848)); // 1272
 ```
 
 ### ✅ Vantagens:
-- **Hoisting**: permite chamar a função antes de sua definição no código.
-- Mais legível em códigos grandes.
+- **Içamento**: facilita a organização do código, isso porque podemos definir a função depois de chamá-la.
+- Fica mais legível em códigos maiores.
 - Facilita a reutilização.
 
 ### ❌ Desvantagens:
-- Menos flexível quando usada como valor (ex: passada como argumento).
-- Mais longa para funções simples em comparação com Arrow Functions ou Function Expressions.
+- Menos flexível em ambientes que exigem funções como valores.
+- Demora mais para escrever em comparação com uma Arrow Functions ou Function Expressions.
 
 ### 💡 Exemplos:
 ```javascript
+//EX:1
 function nord() {
   console.log("Olá, mundo!");
 }
 nord();
 
+//EX:2
 function lord() {
   function smsg() {
     return "Hoje é um ótimo dia para aprender JavaScript!";
@@ -37,6 +39,7 @@ function lord() {
 }
 lord();
 
+//EX:3
 function soma1() {
   let a = 35;
   let b = 357;
@@ -50,7 +53,7 @@ console.log(soma1());
 ## 💻 Function Expression
 
 ### 📄 Definição
-Semelhante à Declaration, mas a função é atribuída a uma variável.
+A função Expression é parecida com a função declaração A diferença é que ela vai ser atribuída para uma variável. A função pode ser usada através dessa variável.
 
 ```javascript
 const quadr = function(numero) {
@@ -62,14 +65,21 @@ console.log(quadr(5)); // 25
 
 ### ✅ Vantagens:
 - Mais flexível: pode ser passada como argumento ou usada dinamicamente.
-- Pode ser **anônima** (sem nome).
+- Pode ser criado sem nome, isso é bom pra quando se quer criar funções rápidas.
 
 ### ❌ Desvantagens:
-- Menos legível se usada sem cuidado.
-- Não pode ser usada antes da sua definição.
+- O código pode ficar menos legível se usada sem cuidado.
+- Se tentar usar antes da declaração pode gerar erros.
 
 ### 💡 Exemplos:
 ```javascript
+// EX:1
+const quadr = function (numero) {
+  return numero * numero;
+};
+console.log(quadr(5));
+
+//EX:2
 const sald = function(nome) {
   return `Olá, ${nome}!`;
 };
@@ -78,6 +88,7 @@ console.log(sald('Lucas'));
 console.log(sald('Maria'));
 console.log(sald('João'));
 
+//EX:3
 const par = function(num) {
   return num % 2 === 0;
 };
@@ -91,23 +102,26 @@ console.log(par(7)); // false
 ## ⚡ Arrow Function
 
 ### 📄 Descrição
-Forma moderna e compacta de criar funções. Usa a seta `=>` em vez da palavra `function`. Ideal para funções curtas.
+ A função arrow é a forma mais resumida dos tipos de função, ao invés de usar a palavra reservada `function`  substituímos por `=>`, em alguns casos não precisamos nem de colocar `return` (no cenário em que só definimos apenas uma instrução no corpo da função).
 
+ 
 ```javascript
 const soma = (a, b) => a + b;
-console.log(soma(2, 3)); // 5
+console.log(soma(2, 3));
+ // 5
 ```
 
 ### ✅ Vantagens:
 - Código mais curto e limpo.
-- Ideal para funções pequenas, especialmente callbacks.
+- Ideal para funções pequenas para usar de callback.
+OBS: **CALLBACK** Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação.
 
 ### ❌ Desvantagens:
-- Pode ser difícil de ler em funções complexas.
-- Não tem seu próprio `this`.
+- Ela pode ser menos legível em funções mais complexas
 
 ### 💡 Exemplos:
 ```javascript
+//EX:1
 let num = () => {
   let n1 = 2;
   let n2 = 3;
@@ -116,11 +130,13 @@ let num = () => {
 };
 console.log(num()); // 5
 
+//EX:2
 const ola = () => {
   console.log("Olá, mundo!");
 };
-ola();
+ola(); //Olá, mundo!
 
+//EX:3
 const quadr = num => {
   const resultado = num * num;
   return resultado;
