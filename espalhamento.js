@@ -16,7 +16,7 @@ console.log(valores2);
 valores2 = [...valores1];
 
 
-//estudar array map, para o mini test
+//estudar array map, espalhamento + desestruturação para o mini test
 
 // com desestruturação
 let exibir_aluno_matricola = ({nome, matricola}) => {
