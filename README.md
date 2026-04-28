@@ -154,7 +154,7 @@ Este guia consolida os conceitos fundamentais de manipulação de Arrays (map, f
 O método filter() percorre o array e retorna um **novo array** contendo apenas os elementos que satisfazem uma condição lógica. Ele não altera o array original.
 
 **💡 Dica:** Com a desestruturação, podemos extrair a propriedade necessária diretamente no argumento da função, deixando o código mais limpo.
-
+```javascript
 const produtos \= \[  
     { nome: 'Laptop', preco: 1200, categoria: 'Tech' },  
     { nome: 'Teclado', preco: 80, categoria: 'Tech' },  
@@ -166,13 +166,13 @@ const eletronicos \= produtos.filter(({ categoria }) \=\> categoria \=== 'Tech')
 
 console.log(eletronicos);   
 // Resultado: \[ { nome: 'Laptop', ... }, { nome: 'Teclado', ... } \]
-
+```
 ## **🔄 2\. Map: A Transformação**
 
 O método map() cria um **novo array** com os resultados da aplicação de uma função em cada elemento do array original. O tamanho do array retornado é sempre igual ao original.
 
 **💡 Dica:** Utilize o *Spread Operator* (...) dentro do map para adicionar ou modificar propriedades mantendo a imutabilidade do objeto original.
-
+```javascript
 // Adicionando um desconto de 10% em cada produto  
 const produtosComDesconto \= produtos.map(item \=\> ({  
     ...item, // Espalha as propriedades originais (nome, preco, categoria)  
@@ -180,11 +180,13 @@ const produtosComDesconto \= produtos.map(item \=\> ({
 }));
 
 console.log(produtosComDesconto);
+```
 
 ## **🧮 3\. Reduce: O Acumulador**
 
 O reduce() reduz o array a um **único valor final** (que pode ser um número, string, objeto ou outro array). É o método mais flexível e poderoso.
 
+```javascript
 const precos \= \[10, 20, 30, 40\];
 
 // Somando todos os valores  
@@ -192,6 +194,8 @@ const precos \= \[10, 20, 30, 40\];
 const total \= precos.reduce((acc, valor) \=\> acc \+ valor, 0);
 
 console.log(total); // Resultado: 100
+```
+
 
 ## **🔗 4\. Integração Total: Cenário Real (Code Exercises)**
 
@@ -204,7 +208,7 @@ Temos uma lista de usuários e precisamos:
 1. Filtrar apenas os usuários **ativos** (filter).  
 2. Remover a senha por segurança e adicionar uma flag VIP (map \+ rest/spread).  
 3. Calcular a soma de pontos dos usuários ativos (reduce).
-
+```javascript
 const usuarios \= \[  
     { id: 1, nome: 'Hugo', pontos: 150, ativo: true, senha: '123' },  
     { id: 2, nome: 'Ana', pontos: 80, ativo: true, senha: '456' },  
@@ -231,6 +235,8 @@ console.log('Usuários Processados:', processados);
 \]  
 \*/  
 console.log('Média de Pontos:', media); // Resultado: 115
+```
+
 
 ## **🛠️ 5\. Resumo Rápido de Sintaxe Moderna**
 
