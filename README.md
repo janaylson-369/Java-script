@@ -167,6 +167,17 @@ const eletronicos = produtos.filter(({ categoria }) => categoria === 'Tech');
 console.log(eletronicos);   
 // Resultado: [ { nome: 'Laptop', ... }, { nome: 'Teclado', ... } ]
 ```
+**  Exemplo2
+
+```javascript
+
+const numeros = [1,-4, 12, 0, -3, 29, -150];
+let numerosPositivos = numeros.filter((numeo) => {
+  return numero >= 0;
+};
+
+```
+
 ## **🔄 2\. Map: A Transformação**
 
 O método map() cria um **novo array** com os resultados da aplicação de uma função em cada elemento do array original. O tamanho do array retornado é sempre igual ao original.
@@ -251,3 +262,4 @@ console.log('Média de Pontos:', media); // Resultado: 115
 * **W3Schools:** Referência base para a sintaxe da API Array.prototype.  
 * **Conhecendo map(), filter() e reduce() em JavaScript:** Leitura complementar sobre fluxo funcional.  
 * **Map, Filter, Reduce - Code Exercises:** Prática de encadeamento (*chaining*) voltada para entrevistas de código.
+
