@@ -195,7 +195,7 @@ console.log(produtosComDesconto);
 
 ## **🧮 3\. Reduce: O Acumulador**
 
-O reduce() reduz o array a um **único valor final** (que pode ser um número, string, objeto ou outro array). É o método mais flexível e poderoso.
+Esse aqui a ideia é simples: o reduce pega a lista toda e "reduz" ela a um único valor. Pode ser uma soma total, uma média, ou até um objeto. Ele usa um "acumulador" que vai guardando o resultado de cada passo.
 
 ```javascript
 const precos = [10, 20, 30, 40];
