@@ -151,7 +151,7 @@ Este guia consolida os conceitos fundamentais de manipulação de Arrays (map, f
 
 ## **📌 1\. Filter: A Peneira de Dados**
 
-O método filter() percorre o array e retorna um **novo array** contendo apenas os elementos que satisfazem uma condição lógica. Ele não altera o array original.
+O filter é bem literal: ele serve pra filtrar as coisas. Sabe quando vc quer pegar só os itens que atendem a uma condição? Tipo "quero só os produtos que custam mais que RS50". Ele também devolve uma lista nova só com o que "passou" no teste que agente definiu.
 
 **💡 Dica:** Com a desestruturação, podemos extrair a propriedade necessária diretamente no argumento da função, deixando o código mais limpo.
 ```javascript
@@ -180,7 +180,7 @@ let numerosPositivos = numeros.filter((numeo) => {
 
 ## **🔄 2\. Map: A Transformação**
 
-O método map() cria um **novo array** com os resultados da aplicação de uma função em cada elemento do array original. O tamanho do array retornado é sempre igual ao original.
+O map serve pra quando a gente quer transformar os dados de uma lista(lista nova com o mesmo número de indice). Imagina que vc tem uma lista de preços e quer dar um desconto em todos eles. O map vai percorrer cada item, fazer a conta e criar uma lista nova com os resultados, sem mexer na lista original.
 
 **💡 Dica:** Utilize o *Spread Operator* (...) dentro do map para adicionar ou modificar propriedades mantendo a imutabilidade do objeto original.
 ```javascript
